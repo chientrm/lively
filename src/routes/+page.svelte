@@ -1,10 +1,15 @@
+<script lang="ts">
+	import { PUBLIC_APP_NAME } from '$env/static/public';
+	import strings from '$lib/constants/strings';
+</script>
+
 <svelte:head>
-	<title>Lively</title>
-    <meta property="og:title" content="How to Become an SEO Expert (8 Steps)" />
-    <meta property="og:description" content="Get from SEO newbie to SEO pro in 8 simple steps." />
+	<title>{PUBLIC_APP_NAME}</title>
+	<meta property="og:title" content={PUBLIC_APP_NAME} />
+	<meta property="og:description" content={strings.DESCRIPTION} />
 </svelte:head>
 
-<h1>Welcome to SvelteKit</h1>
+<h1>{PUBLIC_APP_NAME}</h1>
 <p>
-	Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
+	{strings.DESCRIPTION}
 </p>
