@@ -17,7 +17,7 @@ jobs:
       - run: echo "${{ secrets.ENV }}" > .env
       - run: npm run build
       - run: cp -r package.json package-lock.json build/
-      - run: cd build && npm ci --prod --ignore-scripts
+      - run: cd build && npm ci --omit=dev --ignore-scripts
       - uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
