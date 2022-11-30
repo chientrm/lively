@@ -7,7 +7,8 @@ export default createRouting({
 	workspace: {
 		...segment`/workspace`,
 		children: {
-			dish: segment`/dish`
+			dish: segment`/dish`,
+			fruit: segment`/fruit`
 		}
 	},
 	logout: segment`/logout`

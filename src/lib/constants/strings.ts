@@ -16,5 +16,6 @@ export default {
 	SHOW_PASSWORD: 'Show password',
 	DISHES: 'Dishes',
 	LOGOUT: 'Logout',
-	INVALID_EMAIL_OR_PASSWORD: 'Invalid email or password'
+	INVALID_EMAIL_OR_PASSWORD: 'Invalid email or password',
+	FRUITS: 'Fruits'
 };

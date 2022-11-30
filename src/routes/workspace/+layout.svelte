@@ -24,6 +24,9 @@
 		<a href={routes.workspace.dish()} on:click={hideDrawer}>
 			{strings.DISHES}
 		</a>
+		<a href={routes.workspace.fruit()} on:click={hideDrawer}>
+			{strings.FRUITS}
+		</a>
 		<a href={routes.logout()}>{strings.LOGOUT}</a>
 	</nav>
 {/if}
