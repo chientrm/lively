@@ -38,7 +38,7 @@ const load: PageServerLoad = ({ locals }) => {
 					user: Cookies.User = { email },
 					encryptedUser = await encrypt<Cookies.User>(user);
 				cookies.set(cookie.USER, encryptedUser, { path: '/' });
-				throw redirect(302, routes.workspace());
+				throw redirect(302, routes.workspace.dish());
 			} catch (e) {
 				if (e instanceof yup.ValidationError) {
 					return invalid(400, { message: e.message });

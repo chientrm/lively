@@ -4,6 +4,7 @@
 	import strings from '$lib/constants/strings';
 	import { showDrawer } from '$lib/variables/stores';
 	import { fade } from 'svelte/transition';
+	const hideDrawer = () => showDrawer.set(false);
 </script>
 
 <slot />
@@ -20,8 +21,11 @@
 				close
 			</span>
 		</div>
-		<a href={routes.workspace.dish()} on:click={() => showDrawer.set(false)}>
+		<a href={routes.workspace.dish()} on:click={hideDrawer}>
 			{strings.DISHES}
+		</a>
+		<a href={routes.logout()} on:click={hideDrawer}>
+			{strings.LOGOUT}
 		</a>
 	</nav>
 {/if}
@@ -33,6 +37,9 @@
 		width: 100%;
 		color: white;
 		background-color: #3367d6;
+		display: flex;
+		flex-direction: column;
+		gap: 0.1em;
 	}
 	div {
 		display: flex;
@@ -43,5 +50,10 @@
 	}
 	.grow {
 		flex-grow: 1;
+	}
+	a {
+		background-color: white;
+		text-decoration: none;
+		padding: 1em;
 	}
 </style>
