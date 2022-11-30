@@ -24,7 +24,7 @@
 		<a href={routes.workspace.dish()} on:click={hideDrawer}>
 			{strings.DISHES}
 		</a>
-		<a href={routes.workspace.fruit()} on:click={hideDrawer}>
+		<a href={routes.workspace.fruits()} on:click={hideDrawer}>
 			{strings.FRUITS}
 		</a>
 		<a href={routes.logout()}>{strings.LOGOUT}</a>
@@ -48,9 +48,6 @@
 		align-items: center;
 		padding: 0 1em;
 		gap: 1em;
-	}
-	.grow {
-		flex-grow: 1;
 	}
 	a {
 		background-color: white;

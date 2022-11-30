@@ -4,7 +4,9 @@
 
 <span
 	class="material-icons"
-	on:click={() => showDrawer.set(true)}
+	on:click={() => {
+		showDrawer.set(true);
+	}}
 	on:keypress={() => {}}
 >
 	menu

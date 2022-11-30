@@ -17,5 +17,6 @@ export default {
 	DISHES: 'Dishes',
 	LOGOUT: 'Logout',
 	INVALID_EMAIL_OR_PASSWORD: 'Invalid email or password',
-	FRUITS: 'Fruits'
+	FRUITS: 'Fruits',
+	CREATE: 'Create'
 };

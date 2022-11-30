@@ -1,4 +1,4 @@
-import { createRouting, segment } from 'ts-routes';
+import { createRouting, segment, number } from 'ts-routes';
 
 export default createRouting({
 	manifest: segment`/manifest.json`,
@@ -8,7 +8,13 @@ export default createRouting({
 		...segment`/workspace`,
 		children: {
 			dish: segment`/dish`,
-			fruit: segment`/fruit`
+			fruits: {
+				...segment`/fruit`,
+				children: {
+					create: segment`/create`,
+					fruit: segment`/${number('fruitId')}`
+				}
+			}
 		}
 	},
 	logout: segment`/logout`
