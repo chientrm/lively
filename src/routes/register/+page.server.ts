@@ -37,7 +37,7 @@ const load: PageServerLoad = ({ locals }) => {
 					{} = await prisma.user.create({ data: { email, passwordHash } }),
 					user: Cookies.User = { email },
 					encryptedUser = await encrypt<Cookies.User>(user);
-				cookies.set(cookie.USER, encryptedUser);
+				cookies.set(cookie.USER, encryptedUser, { path: '/' });
 				throw redirect(302, routes.workspace());
 			} catch (e) {
 				if (e instanceof yup.ValidationError) {

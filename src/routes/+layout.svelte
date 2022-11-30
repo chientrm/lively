@@ -17,6 +17,7 @@
 	div {
 		display: flex;
 		flex-direction: column;
+		padding: 1em;
 		gap: 1em;
 	}
 </style>

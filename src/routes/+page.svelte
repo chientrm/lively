@@ -16,3 +16,4 @@
 </p>
 
 <a href={routes.register()}>{strings.REGISTER}</a>
+<a href={routes.login()}>{strings.LOGIN}</a>

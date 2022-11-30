@@ -36,7 +36,7 @@ const load: PageServerLoad = ({ locals }) => {
 					return invalid(400, { message: strings.INVALID_EMAIL_OR_PASSWORD });
 				}
 				const encryptedUser = await encrypt<Cookies.User>(user);
-				cookies.set(cookie.USER, encryptedUser);
+				cookies.set(cookie.USER, encryptedUser, { path: '/' });
 				throw redirect(302, routes.workspace());
 			} catch (e) {
 				if (e instanceof yup.ValidationError) {
