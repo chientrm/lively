@@ -13,5 +13,8 @@ export default {
 	PASSWORD_REQUIRED: 'Password is required',
 	CONFIRM_PASSWORD_REQUIRED: 'Confirm password is required',
 	INVALID_PASSWORD: 'Password contains at least 6 characters',
-	SHOW_PASSWORD: 'Show password'
+	SHOW_PASSWORD: 'Show password',
+	DISHES: 'Dishes',
+	LOGOUT: 'Logout',
+	INVALID_EMAIL_OR_PASSWORD: 'Invalid email or password'
 };

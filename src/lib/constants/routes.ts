@@ -4,5 +4,11 @@ export default createRouting({
 	manifest: segment`/manifest.json`,
 	register: segment`/register`,
 	login: segment`/login`,
-	workspace: segment`/workspace`
+	workspace: {
+		...segment`/workspace`,
+		children: {
+			dish: segment`/dish`
+		}
+	},
+	logout: segment`/logout`
 });
