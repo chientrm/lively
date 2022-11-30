@@ -20,6 +20,7 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"jose": "^4.11.1",
 		"modern-normalize": "^1.1.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
@@ -31,7 +32,8 @@
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^3.2.4",
-		"vite-imagetools": "^4.0.11"
+		"vite-imagetools": "^4.0.11",
+		"yup": "^0.32.11"
 	},
 	"type": "module",
 	"dependencies": {

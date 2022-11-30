@@ -3,9 +3,17 @@
 // and what to do when importing types
 declare namespace App {
 	// interface Error {}
-	// interface Locals {}
+	interface Locals {
+		user: Cookies.User;
+	}
 	// interface PageData {}
 	// interface Platform {}
+}
+
+declare namespace Cookies {
+	interface User {
+		email: string;
+	}
 }
 
 declare module '*png' {

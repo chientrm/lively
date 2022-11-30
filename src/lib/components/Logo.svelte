@@ -10,7 +10,6 @@
 <div>
 	<h1>{PUBLIC_APP_NAME}</h1>
 </div>
-<span>{strings.DESCRIPTION}</span>
 
 <style>
 	div {
