@@ -4,7 +4,7 @@
 declare namespace App {
 	// interface Error {}
 	interface Locals {
-		user: Cookies.User;
+		user?: Cookies.User;
 	}
 	// interface PageData {}
 	// interface Platform {}
