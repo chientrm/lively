@@ -1,5 +1,7 @@
 <script>
 	import { PUBLIC_APP_NAME } from '$env/static/public';
+	import routes from '$lib/constants/routes';
+	import strings from '$lib/constants/strings';
 	import { showDrawer } from '$lib/variables/stores';
 	import { fade } from 'svelte/transition';
 </script>
@@ -18,6 +20,9 @@
 				close
 			</span>
 		</div>
+		<a href={routes.workspace.dish()} on:click={() => showDrawer.set(false)}>
+			{strings.DISHES}
+		</a>
 	</nav>
 {/if}
 
@@ -26,13 +31,15 @@
 		position: fixed;
 		height: 100%;
 		width: 100%;
-		background-color: white;
+		color: white;
+		background-color: #3367d6;
 	}
 	div {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		padding: 1em;
+		padding: 0 1em;
+		gap: 1em;
 	}
 	.grow {
 		flex-grow: 1;

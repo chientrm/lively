@@ -44,3 +44,13 @@ a {
 	/* Support for IE. */
 	font-feature-settings: 'liga';
 }
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+	color: white;
+	padding: 0 1em;
+	background-color: #3367d6;
+}
