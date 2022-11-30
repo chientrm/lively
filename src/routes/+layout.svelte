@@ -1,5 +1,6 @@
 <script>
 	import routes from '$lib/constants/routes';
+	import * as assets from '$lib/assets/images';
 </script>
 
 <svelte:head>
