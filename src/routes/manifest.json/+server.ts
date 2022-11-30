@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import logo512 from '$lib/assets/images/logo.png?w=512&h=512&format=png';
-import logo192 from '$lib/assets/images/logo.png?w=192&h=192&format=png';
+import logo from '$lib/assets/images/logo.png';
 
 const GET: RequestHandler = () => {
 	return json({
@@ -9,7 +8,7 @@ const GET: RequestHandler = () => {
 		name: 'Lively: Living assitant',
 		icons: [
 			{
-				src: logo512,
+				src: logo,
 				type: 'image/png',
 				sizes: '512x512'
 			}
@@ -26,14 +25,14 @@ const GET: RequestHandler = () => {
 				short_name: 'Today',
 				description: 'View meal suggestion for today',
 				url: '/today?source=pwa',
-				icons: [{ src: logo192, sizes: '192x192' }]
+				icons: [{ src: logo, sizes: '512x512' }]
 			},
 			{
 				name: 'What should I eat tomorrow?',
 				short_name: 'Tomorrow',
 				description: 'View meal suggestion for tomorrow',
 				url: '/tomorrow?source=pwa',
-				icons: [{ src: logo192, sizes: '192x192' }]
+				icons: [{ src: logo, sizes: '512x512' }]
 			}
 		],
 		description: 'Living assistant',

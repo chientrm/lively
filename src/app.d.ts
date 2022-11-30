@@ -7,8 +7,3 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 }
-
-declare module '*format=png' {
-	const value: string;
-	export default value;
-}
