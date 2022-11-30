@@ -1,12 +1,13 @@
 import { PUBLIC_APP_NAME } from '$env/static/public';
 import { logo192, logo512 } from '$lib/assets/images';
+import strings from '$lib/constants/strings';
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 const GET: RequestHandler = () => {
 	return json({
 		short_name: PUBLIC_APP_NAME,
-		name: 'Lively: Living assitant',
+		name: `${PUBLIC_APP_NAME}: ${strings.DESCRIPTION}`,
 		icons: [
 			{
 				src: logo512,
