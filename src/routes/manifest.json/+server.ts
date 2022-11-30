@@ -1,10 +1,11 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import logo from '$lib/assets/images/logo.png';
+import { PUBLIC_APP_NAME } from '$env/static/public';
 
 const GET: RequestHandler = () => {
 	return json({
-		short_name: 'Lively',
+		short_name: PUBLIC_APP_NAME,
 		name: 'Lively: Living assitant',
 		icons: [
 			{
