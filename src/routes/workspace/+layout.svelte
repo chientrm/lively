@@ -24,9 +24,7 @@
 		<a href={routes.workspace.dish()} on:click={hideDrawer}>
 			{strings.DISHES}
 		</a>
-		<a href={routes.logout()} on:click={hideDrawer}>
-			{strings.LOGOUT}
-		</a>
+		<a href={routes.logout()}>{strings.LOGOUT}</a>
 	</nav>
 {/if}
 
