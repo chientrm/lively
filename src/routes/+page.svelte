@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { PUBLIC_APP_NAME } from '$env/static/public';
+	import routes from '$lib/constants/routes';
 	import strings from '$lib/constants/strings';
 </script>
 
@@ -13,3 +14,5 @@
 <p>
 	{strings.DESCRIPTION}
 </p>
+
+<a href={routes.register()}>{strings.REGISTER}</a>

@@ -4,5 +4,8 @@
     "java.configuration.updateBuildConfiguration": "interactive",
     "[java]": {
         "editor.defaultFormatter": "redhat.java"
+    },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
     }
 }
