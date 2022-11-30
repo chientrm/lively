@@ -7,6 +7,10 @@
 
 <svelte:head>
 	<link rel="manifest" href={routes.manifest()} />
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
 </svelte:head>
 
 <div>
@@ -17,7 +21,6 @@
 	div {
 		display: flex;
 		flex-direction: column;
-		padding: 1em;
 		gap: 1em;
 	}
 </style>
