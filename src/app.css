@@ -78,3 +78,8 @@ ul {
 .white {
 	color: white;
 }
+
+form.rename {
+	flex-direction: row;
+	padding: 0.5em;
+}

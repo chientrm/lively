@@ -4,6 +4,8 @@
 	import strings from '$lib/constants/strings';
 	import type { PageServerData } from './$types';
 	export let data: PageServerData;
+	let renaming = false;
+	$: data, (renaming = false);
 </script>
 
 <content>
@@ -11,7 +13,26 @@
 		<a class="material-icons white" href={routes.workspace.nutrients()}>
 			arrow_back
 		</a>
-		<h2>{data.nutrient.name}</h2>
+		{#if renaming}
+			<form class="rename" use:enhance action="?/rename">
+				<input name="name" type="text" value={data.nutrient.name} />
+				<button type="submit">
+					<i class="material-icons">done</i>
+				</button>
+			</form>
+		{:else}
+			<h2>{data.nutrient.name}</h2>
+			<span class="grow" />
+			<span
+				class="material-icons"
+				on:click={() => {
+					renaming = true;
+				}}
+				on:keypress={() => {}}
+			>
+				edit
+			</span>
+		{/if}
 	</header>
 	<img
 		src={routes.asset({ imageUuid: data.nutrient.imageUuid })}

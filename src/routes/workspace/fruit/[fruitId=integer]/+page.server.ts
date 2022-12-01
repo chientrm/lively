@@ -28,6 +28,17 @@ const load: PageServerLoad = async ({ locals, params }) => {
 		return { fruit, nutrients };
 	},
 	actions: Actions = {
+		rename: async ({ request, params }) => {
+			const { fruitId } = params,
+				id = parseInt(fruitId),
+				{ name } = await validate(request, {
+					name: yup.string().required()
+				}),
+				_ = await prisma.fruit.update({
+					data: { name },
+					where: { id }
+				});
+		},
 		addNutrient: async ({ request, params }) => {
 			const { fruitId: _fruitId } = params,
 				fruitId = parseInt(_fruitId),
