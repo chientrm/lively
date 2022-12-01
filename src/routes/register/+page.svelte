@@ -9,28 +9,39 @@
 	let showPassword = false;
 </script>
 
-<Logo />
-<form use:enhance>
-	<input name="email" type="email" placeholder={strings.EMAIL} required />
-	<input
-		name="password"
-		type={showPassword ? 'text' : 'password'}
-		placeholder={strings.PASSWORD}
-		required
-	/>
-	<input
-		name="confirm_password"
-		type={showPassword ? 'text' : 'password'}
-		placeholder="{strings.CONFIRM_PASSWORD} "
-		required
-	/>
-	<label>
-		<input type="checkbox" bind:checked={showPassword} />
-		<span>{strings.SHOW_PASSWORD}</span>
-	</label>
-	<input type="submit" value={strings.REGISTER} />
-</form>
-{#if form?.message}
-	<p class="error" in:slide>{form.message}</p>
-{/if}
-<a href={routes.login()}>{strings.LOGIN}</a>
+<content>
+	<Logo />
+	<form use:enhance>
+		<input name="email" type="email" placeholder={strings.EMAIL} required />
+		<input
+			name="password"
+			type={showPassword ? 'text' : 'password'}
+			placeholder={strings.PASSWORD}
+			required
+		/>
+		<input
+			name="confirm_password"
+			type={showPassword ? 'text' : 'password'}
+			placeholder="{strings.CONFIRM_PASSWORD} "
+			required
+		/>
+		<label>
+			<input type="checkbox" bind:checked={showPassword} />
+			<span>{strings.SHOW_PASSWORD}</span>
+		</label>
+		<input type="submit" value={strings.REGISTER} />
+	</form>
+	{#if form?.message}
+		<p class="error" in:slide>{form.message}</p>
+	{/if}
+	<a href={routes.login()}>{strings.LOGIN}</a>
+</content>
+
+<style>
+	content {
+		display: flex;
+		flex-direction: column;
+		padding: 1em;
+		gap: 1em;
+	}
+</style>
