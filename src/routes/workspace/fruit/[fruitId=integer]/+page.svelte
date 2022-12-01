@@ -38,7 +38,7 @@
 		src={routes.asset({ imageUuid: data.fruit.imageUuid })}
 		alt={strings.FRUITS}
 	/>
-	<div>
+	<div class="content">
 		<h3>{strings.NUTRIENTS}</h3>
 		<ul>
 			{#each data.fruit.nutrients as { nutrient }, i}
@@ -69,6 +69,9 @@
 				<input type="submit" value={strings.ADD} />
 			</form>
 		{/if}
+		<form use:enhance action="?/delete">
+			<input type="submit" value={strings.DELETE} />
+		</form>
 	</div>
 </content>
 
@@ -81,11 +84,6 @@
 		width: 100%;
 		height: 15em;
 		object-fit: cover;
-	}
-	div {
-		display: flex;
-		flex-direction: column;
-		padding: 1em;
 	}
 	ul {
 		display: flex;

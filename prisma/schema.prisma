@@ -20,7 +20,7 @@ model Fruit {
   id        Int                 @id @default(autoincrement())
   name      String
   imageUuid String
-  User      User                @relation(fields: [userEmail], references: [email])
+  User      User                @relation(fields: [userEmail], references: [email], onDelete: Cascade)
   userEmail String
   nutrients NutrientsOnFruits[]
 }
@@ -29,15 +29,15 @@ model Nutrient {
   id        Int                 @id @default(autoincrement())
   name      String
   imageUuid String
-  user      User                @relation(fields: [userEmail], references: [email])
+  user      User                @relation(fields: [userEmail], references: [email], onDelete: Cascade)
   userEmail String
   fruits    NutrientsOnFruits[]
 }
 
 model NutrientsOnFruits {
-  fruit      Fruit    @relation(fields: [fruitId], references: [id])
+  fruit      Fruit    @relation(fields: [fruitId], references: [id], onDelete: Cascade)
   fruitId    Int
-  nutrient   Nutrient @relation(fields: [nutrientId], references: [id])
+  nutrient   Nutrient @relation(fields: [nutrientId], references: [id], onDelete: Cascade)
   nutrientId Int
 
   @@id([fruitId, nutrientId])

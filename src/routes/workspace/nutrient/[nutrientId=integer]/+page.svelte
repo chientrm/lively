@@ -67,6 +67,9 @@
 				<input type="submit" value={strings.ADD} />
 			</form>
 		{/if}
+		<form use:enhance action="?/delete">
+			<input type="submit" value={strings.DELETE} />
+		</form>
 	</div>
 </content>
 

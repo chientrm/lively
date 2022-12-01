@@ -1,5 +1,7 @@
+import routes from '$lib/constants/routes';
 import prisma from '$lib/helpers/prisma';
 import { validate } from '$lib/helpers/utils';
+import { redirect } from '@sveltejs/kit';
 import * as yup from 'yup';
 import type { Actions, PageServerLoad } from './$types';
 
@@ -48,6 +50,12 @@ const load: PageServerLoad = async ({ locals, params }) => {
 				_ = await prisma.nutrientsOnFruits.create({
 					data: { fruitId, nutrientId }
 				});
+		},
+		delete: async ({ request, params }) => {
+			const { nutrientId } = params,
+				id = parseInt(nutrientId),
+				_ = await prisma.nutrient.delete({ where: { id } });
+			throw redirect(302, routes.workspace.nutrients());
 		}
 	};
 

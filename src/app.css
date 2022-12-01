@@ -94,3 +94,9 @@ a.link {
 	align-items: flex-start;
 	gap: 1em;
 }
+div.content {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	gap: 1em;
+}

@@ -2,6 +2,8 @@ import prisma from '$lib/helpers/prisma';
 import { validate } from '$lib/helpers/utils';
 import type { Actions, PageServerLoad } from './$types';
 import * as yup from 'yup';
+import { redirect } from '@sveltejs/kit';
+import routes from '$lib/constants/routes';
 
 const load: PageServerLoad = async ({ locals, params }) => {
 		const { email: userEmail } = locals.user!,
@@ -48,6 +50,12 @@ const load: PageServerLoad = async ({ locals, params }) => {
 				_ = await prisma.nutrientsOnFruits.create({
 					data: { fruitId, nutrientId }
 				});
+		},
+		delete: async ({ request, params }) => {
+			const { fruitId } = params,
+				id = parseInt(fruitId),
+				_ = await prisma.fruit.delete({ where: { id } });
+			throw redirect(302, routes.workspace.fruits());
 		}
 	};
 
