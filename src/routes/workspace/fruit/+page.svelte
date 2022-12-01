@@ -13,11 +13,14 @@
 		<h2>{strings.FRUITS}</h2>
 	</header>
 	<ul>
-		{#each data.fruits as { name, imageUuid }, i}
-			<li class:even={i % 2}>
+		{#each data.fruits as { id, name, imageUuid }, i}
+			<a
+				href={routes.workspace.fruits.fruit({ fruitId: `${id}` })}
+				class:even={i % 2}
+			>
 				<img src={routes.asset({ imageUuid })} alt="lel" />
 				<h4>{name}</h4>
-			</li>
+			</a>
 		{/each}
 	</ul>
 	<Fab href={routes.workspace.fruits.create()} />
@@ -38,7 +41,7 @@
 		display: flex;
 		flex-direction: column;
 	}
-	li {
+	a {
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
