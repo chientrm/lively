@@ -1,9 +1,17 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { imagetools } from 'vite-imagetools';
+import { esbuildCommonjs } from '@originjs/vite-plugin-commonjs';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [imagetools(), sveltekit()]
+	plugins: [imagetools(), sveltekit()],
+	optimizeDeps: {
+		esbuildOptions: {
+			plugins: [
+				esbuildCommonjs(['sharp'])
+			]
+		}
+	}
 };
 
 export default config;

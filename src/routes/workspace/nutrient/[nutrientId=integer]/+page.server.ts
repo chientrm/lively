@@ -51,7 +51,7 @@ const load: PageServerLoad = async ({ locals, params }) => {
 					data: { fruitId, nutrientId }
 				});
 		},
-		delete: async ({ request, params }) => {
+		delete: async ({ params }) => {
 			const { nutrientId } = params,
 				id = parseInt(nutrientId),
 				_ = await prisma.nutrient.delete({ where: { id } });
