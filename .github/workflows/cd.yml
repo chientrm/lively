@@ -20,6 +20,7 @@ jobs:
       - run: >
           cd build
           && npm ci --omit=dev --ignore-scripts
+          && npm install sharp
           && npx prisma generate
       - uses: easingthemes/ssh-deploy@main
         env:
