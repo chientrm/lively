@@ -17,7 +17,7 @@ jobs:
       - run: echo "${{ secrets.ENV }}" > .env
       - run: npm run build
       - run: cp -r package.json package-lock.json prisma/ build/
-      - run: cd build && npm ci --omit=dev --ignore-scripts && npx prisma generate
+      - run: cd build && npm ci --omit=dev --ignore-scripts --platform=linux --arch=x64 && npx prisma generate
       - uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
