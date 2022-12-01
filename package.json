@@ -14,7 +14,6 @@
 		"gen": "prisma generate"
 	},
 	"devDependencies": {
-		"@originjs/vite-plugin-commonjs": "^1.0.3",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-node": "^1.0.0-next.101",
 		"@sveltejs/kit": "next",
