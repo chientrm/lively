@@ -1,4 +1,4 @@
-import { createRouting, segment, number } from 'ts-routes';
+import { createRouting, segment, number, uuid } from 'ts-routes';
 
 export default createRouting({
 	manifest: segment`/manifest.json`,
@@ -17,5 +17,6 @@ export default createRouting({
 			}
 		}
 	},
-	logout: segment`/logout`
+	logout: segment`/logout`,
+	asset: segment`/asset/${uuid('imageUuid')}`
 });

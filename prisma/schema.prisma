@@ -18,7 +18,7 @@ model User {
 model Fruit {
   id        Int    @id @default(autoincrement())
   name      String
-  imagePath String
+  imageUuid String
   User      User   @relation(fields: [userEmail], references: [email])
   userEmail String
 }
