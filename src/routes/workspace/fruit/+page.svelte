@@ -12,12 +12,11 @@
 		<DrawerOpener />
 		<h2>{strings.FRUITS}</h2>
 	</header>
-
 	<ul>
-		{#each data.fruits as { name, imageUuid }}
-			<li>
+		{#each data.fruits as { name, imageUuid }, i}
+			<li class:even={i % 2}>
 				<img src={routes.asset({ imageUuid })} alt="lel" />
-				<span>{name}</span>
+				<h4>{name}</h4>
 			</li>
 		{/each}
 	</ul>
@@ -30,9 +29,10 @@
 		flex-direction: column;
 	}
 	img {
-		height: 3em;
-		width: 3em;
+		height: 4em;
+		width: 4em;
 		object-fit: cover;
+		padding: 0.5em;
 	}
 	ul {
 		display: flex;
@@ -41,6 +41,10 @@
 	li {
 		display: flex;
 		flex-direction: row;
+		align-items: flex-start;
 		gap: 1em;
+	}
+	.even {
+		background-color: #f8f8ff;
 	}
 </style>
