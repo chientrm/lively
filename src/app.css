@@ -4,12 +4,14 @@ form {
 	gap: 1em;
 }
 
-input {
+input,
+select {
 	padding: 1em;
 }
 
 span,
 h2,
+h3,
 h4,
 a,
 img,
@@ -71,4 +73,8 @@ header {
 ul {
 	padding: 0;
 	margin: 0;
+	list-style-type: none;
+}
+.white {
+	color: white;
 }
