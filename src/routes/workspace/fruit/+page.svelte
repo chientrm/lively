@@ -7,23 +7,28 @@
 	export let data: PageServerData;
 </script>
 
-<header>
-	<DrawerOpener />
-	<h2>{strings.FRUITS}</h2>
-</header>
+<content>
+	<header>
+		<DrawerOpener />
+		<h2>{strings.FRUITS}</h2>
+	</header>
 
-<ul>
-	{#each data.fruits as { name, imageUuid }}
-		<li>
-			<img src={routes.asset({ imageUuid })} alt="lel" />
-			<span>{name}</span>
-		</li>
-	{/each}
-</ul>
-
-<Fab href={routes.workspace.fruits.create()} />
+	<ul>
+		{#each data.fruits as { name, imageUuid }}
+			<li>
+				<img src={routes.asset({ imageUuid })} alt="lel" />
+				<span>{name}</span>
+			</li>
+		{/each}
+	</ul>
+	<Fab href={routes.workspace.fruits.create()} />
+</content>
 
 <style>
+	content {
+		display: flex;
+		flex-direction: column;
+	}
 	img {
 		height: 3em;
 		width: 3em;

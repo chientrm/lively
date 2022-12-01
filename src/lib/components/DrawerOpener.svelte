@@ -2,12 +2,18 @@
 	import { showDrawer } from '$lib/variables/stores';
 </script>
 
-<span
+<a
 	class="material-icons"
+	href="#/"
 	on:click={() => {
 		showDrawer.set(true);
 	}}
-	on:keypress={() => {}}
 >
 	menu
-</span>
+</a>
+
+<style>
+	a {
+		color: white;
+	}
+</style>
