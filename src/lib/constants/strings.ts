@@ -18,5 +18,7 @@ export default {
 	LOGOUT: 'Logout',
 	INVALID_EMAIL_OR_PASSWORD: 'Invalid email or password',
 	FRUITS: 'Fruits',
-	CREATE: 'Create'
+	CREATE: 'Create',
+	CREATE_FRUIT: 'Create fruit',
+	NAME: 'Name'
 };
