@@ -35,7 +35,7 @@
 		{/if}
 	</header>
 	<img
-		src={routes.asset({ imageUuid: data.fruit.imageUuid })}
+		src={routes.asset.size({ imageUuid: data.fruit.imageUuid, size: '512' })}
 		alt={strings.FRUITS}
 	/>
 	<div class="content">
@@ -50,7 +50,10 @@
 					})}
 				>
 					<img
-						src={routes.asset({ imageUuid: nutrient.imageUuid })}
+						src={routes.asset.size({
+							imageUuid: nutrient.imageUuid,
+							size: '64'
+						})}
 						alt={strings.NUTRIENTS}
 						class="nutrient"
 					/>

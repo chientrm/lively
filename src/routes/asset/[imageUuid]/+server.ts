@@ -1,7 +1,7 @@
 import type { RequestHandler } from './$types';
 import fs from 'fs';
 
-const GET: RequestHandler = async ({ request, params, locals, setHeaders }) => {
+const GET: RequestHandler = async ({ params, locals, setHeaders }) => {
 	const { email } = locals.user!,
 		{ imageUuid } = params,
 		imagePath = `/home/ubuntu/blob/lively/${email}/${imageUuid}`,

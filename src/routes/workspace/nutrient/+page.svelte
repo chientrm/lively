@@ -18,7 +18,7 @@
 				href={routes.workspace.nutrients.nutrient({ nutrientId: `${id}` })}
 				class:even={i % 2}
 			>
-				<img src={routes.asset({ imageUuid })} alt={name} />
+				<img src={routes.asset.size({ imageUuid, size: '64' })} alt={name} />
 				<h4>{name}</h4>
 			</a>
 		{/each}

@@ -18,7 +18,7 @@
 				href={routes.workspace.fruits.fruit({ fruitId: `${id}` })}
 				class:even={i % 2}
 			>
-				<img src={routes.asset({ imageUuid })} alt={name} />
+				<img src={routes.asset.size({ imageUuid, size: '50' })} alt={name} />
 				<h4>{name}</h4>
 			</a>
 		{/each}

@@ -25,5 +25,10 @@ export default createRouting({
 		}
 	},
 	logout: segment`/logout`,
-	asset: segment`/asset/${uuid('imageUuid')}`
+	asset: {
+		...segment`/asset/${uuid('imageUuid')}`,
+		children: {
+			size: segment`/${number('size')}`
+		}
+	}
 });
