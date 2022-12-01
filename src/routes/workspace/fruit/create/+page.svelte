@@ -4,7 +4,7 @@
 	import strings from '$lib/constants/strings';
 </script>
 
-<form use:enhance>
+<form use:enhance enctype="multipart/form-data">
 	<header>
 		<a class="material-icons" href={routes.workspace.fruits()}>arrow_back</a>
 		<h2>{strings.CREATE_FRUIT}</h2>
