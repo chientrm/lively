@@ -13,11 +13,14 @@
 		<h2>{strings.NUTRIENTS}</h2>
 	</header>
 	<ul>
-		{#each data.nutrients as { name, imageUuid }, i}
-			<li class:even={i % 2}>
-				<img src={routes.asset({ imageUuid })} alt="lel" />
+		{#each data.nutrients as { id, name, imageUuid }, i}
+			<a
+				href={routes.workspace.nutrients.nutrient({ nutrientId: `${id}` })}
+				class:even={i % 2}
+			>
+				<img src={routes.asset({ imageUuid })} alt={name} />
 				<h4>{name}</h4>
-			</li>
+			</a>
 		{/each}
 	</ul>
 	<Fab href={routes.workspace.nutrients.create()} />
@@ -38,7 +41,7 @@
 		display: flex;
 		flex-direction: column;
 	}
-	li {
+	a {
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
