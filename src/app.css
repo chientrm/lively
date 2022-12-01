@@ -83,3 +83,14 @@ form.rename {
 	flex-direction: row;
 	padding: 0.5em;
 }
+
+.even {
+	background-color: #f8f8ff;
+}
+
+a.link {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 1em;
+}

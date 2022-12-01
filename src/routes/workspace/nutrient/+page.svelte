@@ -47,7 +47,4 @@
 		align-items: flex-start;
 		gap: 1em;
 	}
-	.even {
-		background-color: #f8f8ff;
-	}
 </style>

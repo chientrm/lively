@@ -41,9 +41,10 @@
 	<div>
 		<h3>{strings.FRUITS}</h3>
 		<ul>
-			{#each data.nutrient.fruits as { fruit }}
+			{#each data.nutrient.fruits as { fruit }, i}
 				<a
 					class="link"
+					class:even={i % 2}
 					href={routes.workspace.fruits.fruit({ fruitId: `${fruit.id}` })}
 				>
 					<img
@@ -87,12 +88,6 @@
 	ul {
 		display: flex;
 		flex-direction: column;
-	}
-	a.link {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		gap: 1em;
 	}
 	img.smallImg {
 		height: 4em;
