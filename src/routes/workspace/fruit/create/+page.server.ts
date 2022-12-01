@@ -15,9 +15,9 @@ const actions: Actions = {
 				image: yup.mixed().required()
 			}),
 			blob = image as Blob,
-			dirPath = `/home/ubuntu/blob/lively`,
+			dirPath = `/home/ubuntu/blob/lively/${email}`,
 			imageUuid = v4(),
-			imagePath = `${dirPath}/${email}/${imageUuid}`;
+			imagePath = `${dirPath}/${imageUuid}`;
 		fs.mkdirSync(dirPath, { recursive: true });
 		fs.writeFileSync(imagePath, Buffer.from(await blob.arrayBuffer()));
 		const _ = await prisma.fruit.create({
