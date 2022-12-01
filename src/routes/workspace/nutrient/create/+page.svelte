@@ -6,8 +6,8 @@
 
 <form use:enhance>
 	<header>
-		<a class="material-icons" href={routes.workspace.fruits()}>arrow_back</a>
-		<h2>{strings.CREATE_FRUIT}</h2>
+		<a class="material-icons" href={routes.workspace.nutrients()}>arrow_back</a>
+		<h2>{strings.CREATE_NUTRIENT}</h2>
 		<span class="grow" />
 		<button type="submit">
 			<i class="material-icons">done</i>

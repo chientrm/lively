@@ -9,16 +9,36 @@ datasource db {
 }
 
 model User {
-  email        String  @id
+  email        String     @id
   passwordHash String
-  verified     Boolean @default(false)
+  verified     Boolean    @default(false)
   fruits       Fruit[]
+  nutrients    Nutrient[]
 }
 
 model Fruit {
-  id        Int    @id @default(autoincrement())
+  id        Int                 @id @default(autoincrement())
   name      String
   imageUuid String
-  User      User   @relation(fields: [userEmail], references: [email])
+  User      User                @relation(fields: [userEmail], references: [email])
   userEmail String
+  nutrients NutrientsOnFruits[]
+}
+
+model Nutrient {
+  id        Int                 @id @default(autoincrement())
+  name      String
+  imageUuid String
+  user      User                @relation(fields: [userEmail], references: [email])
+  userEmail String
+  fruits    NutrientsOnFruits[]
+}
+
+model NutrientsOnFruits {
+  fruit      Fruit    @relation(fields: [fruitId], references: [id])
+  fruitId    Int
+  nutrient   Nutrient @relation(fields: [nutrientId], references: [id])
+  nutrientId Int
+
+  @@id([fruitId, nutrientId])
 }

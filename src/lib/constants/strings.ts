@@ -20,5 +20,7 @@ export default {
 	FRUITS: 'Fruits',
 	CREATE: 'Create',
 	CREATE_FRUIT: 'Create fruit',
-	NAME: 'Name'
+	NAME: 'Name',
+	NUTRIENTS: 'Nutrients',
+	CREATE_NUTRIENT: 'Create nutrient'
 };

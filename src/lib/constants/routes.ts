@@ -14,6 +14,13 @@ export default createRouting({
 					create: segment`/create`,
 					fruit: segment`/${number('fruitId')}`
 				}
+			},
+			nutrients: {
+				...segment`/nutrient`,
+				children: {
+					create: segment`/create`,
+					nutrient: segment`/${number('nutrientId')}`
+				}
 			}
 		}
 	},
