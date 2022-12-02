@@ -21,7 +21,7 @@
 				close
 			</span>
 		</div>
-		<a href={routes.workspace.dish()} on:click={hideDrawer}>
+		<a href={routes.workspace.dishes()} on:click={hideDrawer}>
 			{strings.DISHES}
 		</a>
 		<a href={routes.workspace.fruits()} on:click={hideDrawer}>

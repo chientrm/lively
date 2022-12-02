@@ -9,7 +9,7 @@
 	<DrawerOpener />
 	<h2>{PUBLIC_APP_NAME}</h2>
 </header>
-<a href={routes.workspace.dish()}>{strings.DISHES}</a>
+<a href={routes.workspace.dishes()}>{strings.DISHES}</a>
 <a href={routes.logout()}>{strings.LOGOUT}</a>
 
 <style>
