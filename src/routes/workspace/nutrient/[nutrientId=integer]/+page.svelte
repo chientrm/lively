@@ -2,6 +2,7 @@
 	import { enhance } from '$app/forms';
 	import routes from '$lib/constants/routes';
 	import strings from '$lib/constants/strings';
+	import { confirmDelete } from '$lib/helpers/funcs';
 	import type { PageServerData } from './$types';
 	export let data: PageServerData;
 	let renaming = false;
@@ -67,7 +68,7 @@
 				<input type="submit" value={strings.ADD} />
 			</form>
 		{/if}
-		<form use:enhance action="?/delete">
+		<form use:enhance={confirmDelete(data.nutrient.name)} action="?/delete">
 			<input type="submit" value={strings.DELETE} />
 		</form>
 	</div>
