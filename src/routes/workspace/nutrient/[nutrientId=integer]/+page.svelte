@@ -39,7 +39,7 @@
 		src={routes.asset.size({ imageUuid: data.nutrient.imageUuid, size: '512' })}
 		alt={strings.NUTRIENTS}
 	/>
-	<div>
+	<div class="content">
 		<h3>{strings.FRUITS}</h3>
 		<ul>
 			{#each data.nutrient.fruits as { fruit }, i}
