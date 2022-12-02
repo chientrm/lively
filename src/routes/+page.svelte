@@ -10,10 +10,12 @@
 	<meta property="og:description" content={strings.DESCRIPTION} />
 </svelte:head>
 
-<h1>{PUBLIC_APP_NAME}</h1>
-<p>
-	{strings.DESCRIPTION}
-</p>
+<div class="content">
+	<h1>{PUBLIC_APP_NAME}</h1>
+	<p>
+		{strings.DESCRIPTION}
+	</p>
 
-<a href={routes.register()}>{strings.REGISTER}</a>
-<a href={routes.login()}>{strings.LOGIN}</a>
+	<a href={routes.register()}>{strings.REGISTER}</a>
+	<a href={routes.login()}>{strings.LOGIN}</a>
+</div>
