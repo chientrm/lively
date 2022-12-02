@@ -7,7 +7,13 @@ export default createRouting({
 	workspace: {
 		...segment`/workspace`,
 		children: {
-			dish: segment`/dish`,
+			dishes: {
+				...segment`/dish`,
+				children: {
+					create: segment`/create`,
+					dish: segment`/${number('dishId')}`
+				}
+			},
 			fruits: {
 				...segment`/fruit`,
 				children: {

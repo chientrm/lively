@@ -3,11 +3,11 @@ import type { PageServerLoad } from './$types';
 
 const load: PageServerLoad = async ({ locals }) => {
 	const { email: userEmail } = locals.user!,
-		fruits = await prisma.dish.findMany({
+		dishes = await prisma.dish.findMany({
 			select: { id: true, name: true, imageUuid: true },
 			where: { userEmail }
 		});
-	return { fruits };
+	return { dishes };
 };
 
 export { load };
