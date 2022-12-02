@@ -11,7 +11,7 @@ import type { Actions, PageServerLoad } from './$types';
 
 const load: PageServerLoad = ({ locals }) => {
 		if (locals.user) {
-			throw redirect(302, routes.workspace());
+			throw redirect(302, routes.home());
 		}
 	},
 	actions: Actions = {
@@ -38,7 +38,7 @@ const load: PageServerLoad = ({ locals }) => {
 					user: Cookies.User = { email },
 					encryptedUser = await encrypt<Cookies.User>(user);
 				cookies.set(cookie.USER, encryptedUser, { path: '/' });
-				throw redirect(302, routes.workspace.dishes());
+				throw redirect(302, routes.home());
 			} catch (e) {
 				if (e instanceof yup.ValidationError) {
 					return invalid(400, { message: e.message });

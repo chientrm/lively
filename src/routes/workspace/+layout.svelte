@@ -21,6 +21,9 @@
 				close
 			</span>
 		</div>
+		<a href={routes.home()} on:click={hideDrawer}>
+			{strings.HOME}
+		</a>
 		<a href={routes.workspace.dishes()} on:click={hideDrawer}>
 			{strings.DISHES}
 		</a>

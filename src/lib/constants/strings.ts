@@ -1,4 +1,5 @@
 export default {
+	HOME: 'Home',
 	DESCRIPTION: 'Living assistant',
 	REGISTER: 'Register',
 	LOGIN: 'Login',
@@ -27,5 +28,6 @@ export default {
 	ADD: 'Add',
 	ADD_FRUIT: 'Add fruit',
 	DELETE: 'Delete',
-	CREATE_DISH: 'Create dish'
+	CREATE_DISH: 'Create dish',
+	WORKSPACE: 'Workspace'
 };

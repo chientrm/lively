@@ -1,6 +1,7 @@
 import { createRouting, segment, number, uuid } from 'ts-routes';
 
 export default createRouting({
+	home: segment`/`,
 	manifest: segment`/manifest.json`,
 	register: segment`/register`,
 	login: segment`/login`,
